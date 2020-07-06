@@ -1,15 +1,25 @@
-.signup-in-form {
-    /* padding: 5px;
-    margin: 5px;
-     */
+h1 {
+    text-align: center;
+}
+
+.signup-form {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 input {
-    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 label {
-    display: block;
+    padding: 15px;
+}
+
+.signup-button {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
 }

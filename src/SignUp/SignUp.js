@@ -12,7 +12,7 @@ class SignUp extends Component {
         return (
             <section className="signup">
                 <h1>Sign Up</h1>
-                <form className="signup-in-form"onSubmit={this.handleSignUp}>
+                <form className="signup-form"onSubmit={this.handleSignUp}>
                     <label>Name</label>
                     <input 
                         required
@@ -32,9 +32,12 @@ class SignUp extends Component {
                         required
                         text="Password"
                         type="password"
-                    ></input>
-                    <button type="submit" className="button">
-                    Sign Up
+                    >
+                    </input>
+                    <button 
+                        type="submit" 
+                        className="signup-button">
+                        Sign Up
                     </button>
                 </form>
             </section>

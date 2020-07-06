@@ -10,7 +10,7 @@ class Add extends Component {
 
     render() {
         return (
-            <section>
+            <section className="add-page">
                 <h1>Add a Review</h1>
                 <section className="guide-section">
                     <h2>You are entering a spoiler free zone</h2>
@@ -23,8 +23,12 @@ class Add extends Component {
                 </section>
                 <form className="add-review-form" onSubmit={this.handleAdd}>
                     <div className="field">
-                        <label htmlFor="title-author-input">Title, Author</label>
-                        <input type="text" id="title-author-input" name="title-author"/>
+                        <label htmlFor="title-input">Title</label>
+                        <input type="text" id="title-input" name="title-author"/>
+                    </div>
+                    <div className="field">
+                        <label htmlFor="author-input">Author</label>
+                        <input type="text" id="author-input" name="title-author"/>
                     </div>
                     <div className="field">
                         <label htmlFor="add-content-input">Content</label>
@@ -46,7 +50,7 @@ class Add extends Component {
                         </section>
                         <h4>Given thought to the rating parameters above,</h4>
                         <h4>what rating would you give to this piece?</h4>
-                        <label htmlFor="rating-input">Rating</label>
+                        <label className="rating-input" htmlFor="rating-input">Rating</label>
                         <select id="rating-input" name="rating-input">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -56,7 +60,7 @@ class Add extends Component {
                         </select>
                     </div>
                     <div htmlFor="add-review-buttons">
-                        <button type="submit">Submit</button>
+                        <button type="submit" className="add-button">Submit</button>
                     </div>
                 </form>
             </section>

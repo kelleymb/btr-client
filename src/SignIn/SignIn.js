@@ -26,8 +26,10 @@ class SignIn extends Component {
                         text="Password"
                         type="password"
                     ></input>
-                    <button type="submit" className="button">
-                    Sign In
+                    <button 
+                        type="submit" 
+                        className="signin-button">
+                        Sign In
                     </button>
                 </form>
             </section>

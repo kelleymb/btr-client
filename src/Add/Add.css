@@ -1,37 +1,56 @@
-* {
+.add-page {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
 }
 
 h1 {
-    font-size: 64px;
+    text-align: center;
+    font-size: 50px;
 }
 
-input, textarea {
-    width: 600px;
+.guide-section {
+    text-align: center;
+}
+
+.add-review-form {
+    text-align: center;
 }
 
 input {
-    height: 50px;
+    padding: 15px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    padding: 15px;
+}
+
+label::before {
+    content: "\A";
+    white-space: pre;
+}
+
+label::after {
+    content: "\A";
+    white-space: pre;
+}
+
+.rating-input {
+    padding: 5px;
+}
+
+.add-button {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+}
+
+div {
+    padding: 5px;
 }
 
 textarea {
     height: 300px;
-}
-
-select {
-    width: 35px;
-    height: 35px;
-    font-size: large;
-}
-
-button {
-    width: 80px;
-    padding: 5px;
-    margin: 25px;
-}
-
-img {
-    width: 200px;
-    height: auto;
 }
