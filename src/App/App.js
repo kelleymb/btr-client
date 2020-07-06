@@ -4,12 +4,12 @@ import './App.css';
 import Nav from '../Nav/Nav';
 import About from '../About/About';
 import Footer from '../Footer/Footer';
+import Home from '../Home/Home';
 import SignUp from '../SignUp/SignUp';
+import SignIn from '../SignIn/SignIn';
 import Panel from '../Panel/Panel';
 import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews'
-
-
 
 function App() {
     
@@ -47,10 +47,10 @@ function App() {
           <h1>Born To Read</h1>
         </header>
           <main>
-            {/* path="/" NEEDS MORE! */}
-            <Route 
-              path="/" 
-              component={App}>
+            <Route>
+              <Route 
+                exact path="/" 
+                component={Home}/>
               <Route 
                 path="/about" 
                 component={About}/>
@@ -58,16 +58,20 @@ function App() {
                 path="/signup" 
                 component={SignUp}/>
               <Route 
+                path="/signin"
+                component={SignIn}
+                />
+              <Route 
                 path="/panel" 
                 render={() => (
                   <Panel reviews={REVIEWS.map(rev => 
                     <section>
-                      <p>User: {rev.user_name}</p>
-                      <p>Title: {rev.title}</p>
-                      <p>Author: {rev.author}</p>
-                      <p>Rating: {rev.rating}</p>
-                      <p>Content: {rev.content}</p>
-                      <p>Timestamp: {rev.timestamp}</p>
+                      <h4>User: {rev.user_name}</h4>
+                      <h4>Title: {rev.title}</h4>
+                      <h4>Author: {rev.author}</h4>
+                      <h4>Rating: {rev.rating}</h4>
+                      <h4>Content: {rev.content}</h4>
+                      <h4>Timestamp: {rev.timestamp}</h4>
                     </section>)}
                   />
                 )}
@@ -80,19 +84,16 @@ function App() {
                 render={() => (
                   <Reviews reviews={REVIEWS.map(rev => 
                     <section>
-                      <p>User: {rev.user_name}</p>
-                      <p>Title: {rev.title}</p>
-                      <p>Author: {rev.author}</p>
-                      <p>Rating: {rev.rating}</p>
-                      <p>Content: {rev.content}</p>
-                      <p>Timestamp: {rev.timestamp}</p>
+                      <h4>User: {rev.user_name}</h4>
+                      <h4>Title: {rev.title}</h4>
+                      <h4>Author: {rev.author}</h4>
+                      <h4>Rating: {rev.rating}</h4>
+                      <h4>Content: {rev.content}</h4>
+                      <h4>Timestamp: {rev.timestamp}</h4>
                     </section>)}
                   />
                 )}
               />
-              {/* <Route 
-                path="/reviews" 
-                component={Reviews}/> */}
             </Route>
           </main>
         <Footer />

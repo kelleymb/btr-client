@@ -1,8 +1,15 @@
-* {
-    box-sizing: border-box;
+.signup-in-form {
+    /* padding: 5px;
+    margin: 5px;
+     */
+    display: flex;
+    flex-direction: column;
 }
 
-.signup-in-form {
-    padding: 5px;
-    margin: 5px;
+input {
+    display: block;
+}
+
+label {
+    display: block;
 }

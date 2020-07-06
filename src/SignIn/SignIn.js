@@ -1,25 +1,18 @@
 import React, { Component } from 'react';
-import './SignUp.css';
+import './SignIn.css';
 
-class SignUp extends Component {
+class SignIn extends Component {
     
-    handleSignUp = e => {
+    handleSignIn = e => {
         e.preventDefault();
         alert('Submit button works!')
     }
 
     render() {
         return (
-            <section className="signup">
-                <h1>Sign Up</h1>
-                <form className="signup-in-form"onSubmit={this.handleSignUp}>
-                    <label>Name</label>
-                    <input 
-                        required
-                        text="Name"
-                        type="text"
-                    >
-                    </input>
+            <section className="signin">
+                <h1>Sign In</h1>
+                <form className="signin-form" onSubmit={this.handleSignIn}>
                     <label>Email Address</label>
                     <input 
                         required
@@ -34,7 +27,7 @@ class SignUp extends Component {
                         type="password"
                     ></input>
                     <button type="submit" className="button">
-                    Sign Up
+                    Sign In
                     </button>
                 </form>
             </section>
@@ -42,4 +35,4 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+export default SignIn;
