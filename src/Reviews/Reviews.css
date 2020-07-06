@@ -1,8 +1,28 @@
+.rating-search-form  {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
+
 select {
     width: 200px;
     height: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 option {
     padding: 5px;
+}
+
+.rating-button {
+    margin-left: auto;
+    margin-right: auto;
 }

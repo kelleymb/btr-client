@@ -15,7 +15,7 @@ class Reviews extends Component {
             <section>
                 <h2>Browse through user insights</h2>
                 <form className="rating-search-form" onSubmit={this.handleSearch}>
-                    <label htmlFor="rating-input">Rating</label>
+                    <label htmlFor="rating-input">Ratings Menu</label>
                     <select id="rating-input" name="rating-input">
                         <option value="">5 Star Reviews</option>
                         <option value="">4 Star Reviews</option>
