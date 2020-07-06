@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+.signup-in-form {
+    padding: 5px;
+    margin: 5px;
+}

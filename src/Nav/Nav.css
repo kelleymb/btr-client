@@ -1,0 +1,19 @@
+ul {
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.nav {
+    float: left;
+    padding: 5px;
+}
+
+.nav:hover {
+    font-size: 30px;
+    background-color: aquamarine;
+}

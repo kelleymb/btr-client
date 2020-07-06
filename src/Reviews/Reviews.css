@@ -1,0 +1,8 @@
+select {
+    width: 200px;
+    height: auto;
+}
+
+option {
+    padding: 5px;
+}
