@@ -25,7 +25,7 @@ class Reviews extends Component {
             })
     }
 
-// WORKING with database- display in results section
+    //WORKING with database- display in results section
     handleUser = e => {
         e.preventDefault()
         const user = e.target['user-input'].value

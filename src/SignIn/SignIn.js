@@ -4,6 +4,12 @@ import './SignIn.css';
 
 class SignIn extends Component {
     
+    static defaultProps = {
+        history: {
+            push: () => { }
+        },
+    }
+
     handleSignIn = e => {
         e.preventDefault();
         const userCred = {
@@ -22,6 +28,10 @@ class SignIn extends Component {
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res
+        })
+        .then(review => {
+        //     this.context.addReview(review)
+            this.props.history.push('/panel')
         })
         .catch(error => {
             console.error({ error })
