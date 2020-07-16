@@ -4,7 +4,6 @@ import Home from '../Home/Home';
 import SignUp from '../SignUp/SignUp';
 import SignIn from '../SignIn/SignIn';
 import Panel from '../Panel/Panel';
-import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews'
 import './Nav.css';
 
@@ -17,8 +16,6 @@ class Nav extends Component {
                 <li className="nav" key={SignUp}><Link to="/signup">Sign Up</Link></li>
                 <li className="nav" key={SignIn}><Link to="/signin">Sign In</Link></li>
                 <li className="nav" key={Panel}><Link to="/panel">Panel</Link></li>
-                <li className="nav" key={Add}><Link to="/add">Add a Review</Link></li>
-                <li className="nav" key={Reviews}><Link to="/reviews">Reviews</Link></li>
             </ul>
         )
     }

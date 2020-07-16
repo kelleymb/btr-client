@@ -1,14 +1,53 @@
 import React, { Component } from 'react';
+import config from '../config'
+// import Context from '../Context';
 import './Add.css';
+
 
 class Add extends Component {
 
-    handleAdd = e => {
+    // static defaultProps = {
+    //     history: {
+    //         push: () => { }
+    //     },
+    // }
+
+    // static contextType = Context;
+
+    handleSubmit = e => {
         e.preventDefault();
-        alert('Submit button works!')
+        const newReview = {
+            title: e.target['title-input'].value,
+            author: e.target['author-input'].value,
+            content: e.target['add-content'].value,
+            rating: e.target['rating-input'].value,
+        }
+        console.log(newReview)
+        fetch(`${config.API_ENDPOINT}/add`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(newReview),
+        })
+        .then(res => {
+            console.log(res)
+            if (!res.ok)
+                return res.json().then(e => Promise.reject(e))
+            return res.json()
+        })
+        // .then(review => {
+        //     this.context.addReview(review)
+        //     this.props.history.push(``)
+        // })
+        .catch(error => {
+            console.error({ error })
+            console.log(error)
+        })
     }
 
     render() {
+    
         return (
             <section className="add-page">
                 <h1>Add a Review</h1>
@@ -21,14 +60,14 @@ class Add extends Component {
                     <h4>Did it affect you?</h4>
                     <h4>Do you want to read it again?</h4>
                 </section>
-                <form className="add-review-form" onSubmit={this.handleAdd}>
+                <form className="add-review-form" onSubmit={this.handleSubmit}>
                     <div className="field">
                         <label htmlFor="title-input">Title</label>
-                        <input type="text" id="title-input" name="title-author"/>
+                        <input type="text" id="title-input" name="title-input"/>
                     </div>
                     <div className="field">
                         <label htmlFor="author-input">Author</label>
-                        <input type="text" id="author-input" name="title-author"/>
+                        <input type="text" id="author-input" name="author-input"/>
                     </div>
                     <div className="field">
                         <label htmlFor="add-content-input">Content</label>

@@ -18,13 +18,11 @@ class Panel extends Component {
                 </section>
                 <section className="view-reviews">
                     <h4>Curious what's in the blogosphere?</h4>
-                    <ul>
+                    <Reviews />
+                    
+                    {/* <ul>
                         <li key={Reviews}><Link to="/reviews">Explore reviews</Link></li>
-                    </ul>
-                </section>
-                <section className="my-reviews">
-                    <h2>My Reviews</h2>
-                    <h4>{this.props.reviews}</h4>
+                    </ul> */}
                 </section>
             </section>
             

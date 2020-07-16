@@ -12,6 +12,7 @@ input {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
 }
 
 label {
@@ -22,4 +23,5 @@ label {
     margin-left: auto;
     margin-right: auto;
     font-size: medium;
+    padding: 5px;
 }

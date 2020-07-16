@@ -18,8 +18,13 @@ label {
     padding: 15px;
 }
 
+.button-div {
+    padding: 25px;
+}
+
 .signup-button {
     margin-left: auto;
     margin-right: auto;
     font-size: medium;
+    padding: 5px;
 }

@@ -5,7 +5,7 @@ class SignIn extends Component {
     
     handleSignIn = e => {
         e.preventDefault();
-        alert('Submit button works!')
+        alert('Sign In button works!')
     }
 
     render() {
@@ -26,11 +26,13 @@ class SignIn extends Component {
                         text="Password"
                         type="password"
                     ></input>
-                    <button 
+                    <div className="button-div">
+                        <button 
                         type="submit" 
                         className="signin-button">
                         Sign In
-                    </button>
+                        </button>
+                    </div>
                 </form>
             </section>
         )
