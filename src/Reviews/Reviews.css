@@ -1,4 +1,5 @@
-.rating-search-form  {
+
+.rating-search-form, .user-search-form  {
     display: flex;
     flex-direction: column;
 }
@@ -11,18 +12,18 @@ label {
     text-align: center;
 }
 
-select {
+select, input {
     width: 200px;
     height: auto;
     margin-right: auto;
     margin-left: auto;
 }
 
-option {
-    padding: 5px;
+option, input {
+    padding: 10px;
 }
 
-.rating-button {
+.rating-button, .user-search-button {
     margin-left: auto;
     margin-right: auto;
 }

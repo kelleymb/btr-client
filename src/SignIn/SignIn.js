@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
+import config from '../config'
 import './SignIn.css';
 
 class SignIn extends Component {
     
     handleSignIn = e => {
         e.preventDefault();
-        alert('Sign In button works!')
+        const userCred = {
+            email: e.target['email'].value,
+            password: e.target['password'].value
+        }
+        fetch(`${config.API_ENDPOINT}/signin`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(userCred)
+        })  
+        .then(res => {
+            console.log(res)
+            if (!res.ok)
+                return res.json().then(e => Promise.reject(e))
+            return res
+        })
+        .catch(error => {
+            console.error({ error })
+            console.log(error)
+        })
     }
 
     render() {
@@ -18,6 +39,7 @@ class SignIn extends Component {
                         required
                         text="Email Address"
                         type="email"
+                        name="email"
                     >
                     </input>
                     <label>Password</label>
@@ -25,6 +47,7 @@ class SignIn extends Component {
                         required
                         text="Password"
                         type="password"
+                        name="password"
                     ></input>
                     <div className="button-div">
                         <button 

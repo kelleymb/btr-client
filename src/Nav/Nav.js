@@ -4,7 +4,6 @@ import Home from '../Home/Home';
 import SignUp from '../SignUp/SignUp';
 import SignIn from '../SignIn/SignIn';
 import Panel from '../Panel/Panel';
-import Reviews from '../Reviews/Reviews'
 import './Nav.css';
 
 class Nav extends Component {

@@ -19,10 +19,6 @@ class Panel extends Component {
                 <section className="view-reviews">
                     <h4>Curious what's in the blogosphere?</h4>
                     <Reviews />
-                    
-                    {/* <ul>
-                        <li key={Reviews}><Link to="/reviews">Explore reviews</Link></li>
-                    </ul> */}
                 </section>
             </section>
             

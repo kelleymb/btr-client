@@ -17,12 +17,13 @@ class Add extends Component {
     handleSubmit = e => {
         e.preventDefault();
         const newReview = {
+            user_name: "Lorem",
             title: e.target['title-input'].value,
             author: e.target['author-input'].value,
             content: e.target['add-content'].value,
             rating: e.target['rating-input'].value,
         }
-        console.log(newReview)
+        console.log(JSON.stringify(newReview))
         fetch(`${config.API_ENDPOINT}/add`, {
             method: 'POST',
             headers: {
@@ -34,7 +35,7 @@ class Add extends Component {
             console.log(res)
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
-            return res.json()
+            return res
         })
         // .then(review => {
         //     this.context.addReview(review)
