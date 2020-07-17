@@ -6,7 +6,6 @@ class Reviews extends Component {
     
     state = {
         reviews: [],
-        error: null
     }
 
     handleRating = e => {
@@ -15,38 +14,55 @@ class Reviews extends Component {
         console.log(rating)
         console.log(typeof rating)
         fetch(`${config.API_ENDPOINT}/reviews?rating=${rating}`)
-            .then(ratingRes => {
-                if (!ratingRes.ok)
-                    return ratingRes.json().then(e => Promise.reject(e))
-                if(ratingRes.json() === 0) {
-                    console.error('Oops! There are no reviews available for that rating. Try again.')
-                }
-                return ratingRes
-            })
-            .catch(error => {
-                console.error({ error })
-                console.log(error)
-            })
+        .then(res => {
+            if (!res.ok)
+              return res.json().then(e => Promise.reject(e))
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+            this.setState({ 
+                reviews: [
+                    ...data
+                ]
+            },
+            ()=>{console.log(this.state.reviews)})
+        })
+        .catch(error => {
+            console.error({ error })
+            console.log(error)
+        })
     }
+
+    // `.then(data => { 
+    //     console.log(data) 
+    //     this.setState({ 
+    //         reviews: [ ...data ] }, ()=>{console.log(this.state.reviews)}) })`
 
     handleUser = e => {
         e.preventDefault()
         const user = e.target['user-input'].value
         console.log(user)
         fetch(`${config.API_ENDPOINT}/reviews/${user}`)
-            .then(userRes => {
-                if (!userRes.ok)
-                    return userRes.json().then(e => Promise.reject(e))
-                if(userRes.json() === 0) {
-                    console.error('Oops! There is no user by that User Name. Check your spelling and try again!')
-                }
-                return userRes
+        .then(res => {
+            if (!res.ok)
+                return res.json().then(e => Promise.reject(e))
+                return res.json()
             })
+        .then(data => {
+            console.log(data)
+            this.setState({ 
+                reviews: [
+                    ...data
+                ]
+            })
+        })
             .catch(error => {
                 console.error({ error })
                 console.log(error)
             })
     }
+
 
     render() {
         const { reviews=[] } = this.state.reviews
