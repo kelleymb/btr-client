@@ -6,12 +6,13 @@ import './Add.css';
 
 class Add extends Component {
 
-    // static defaultProps = {
-    //     history: {
-    //         push: () => { }
-    //     },
-    // }
-
+    static defaultProps = {
+        history: {
+            push: () => { }
+        },
+    }
+    
+    //ADD CONTEXT FROM USER CREDENTIALS
     // static contextType = Context;
 
 
@@ -39,10 +40,10 @@ class Add extends Component {
                 return res.json().then(e => Promise.reject(e))
             return res
         })
-        // .then(review => {
-        //     this.context.addReview(review)
-        //     this.props.history.push(``)
-        // })
+        .then(() => {
+            // this.context.??
+            this.props.history.push('/dashboard')
+        })
         .catch(error => {
             console.error({ error })
             console.log(error)

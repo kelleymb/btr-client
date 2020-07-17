@@ -4,13 +4,17 @@ import config from '../config';
 
 class Reviews extends Component {
     
-    //ERROR Rating must be a number
+    state = {
+        reviews: [],
+        error: null
+    }
+
     handleRating = e => {
         e.preventDefault();
         const rating = Number(e.target['rating-input'].value)
         console.log(rating)
         console.log(typeof rating)
-        fetch(`${config.API_ENDPOINT}/reviews?${rating}`)
+        fetch(`${config.API_ENDPOINT}/reviews?rating=${rating}`)
             .then(ratingRes => {
                 if (!ratingRes.ok)
                     return ratingRes.json().then(e => Promise.reject(e))
@@ -25,7 +29,6 @@ class Reviews extends Component {
             })
     }
 
-    //WORKING with database- display in results section
     handleUser = e => {
         e.preventDefault()
         const user = e.target['user-input'].value
@@ -46,7 +49,7 @@ class Reviews extends Component {
     }
 
     render() {
-
+        const { reviews=[] } = this.state.reviews
         return (
             <section>
                 <h2>Browse through user insights</h2>
@@ -65,7 +68,16 @@ class Reviews extends Component {
                         </section>
                     </form>
                     <section className="ratings_results">
-                        {/* code results to appear here */}
+                        {reviews.map(review =>
+                            <p>
+                                <li key={review.id}>{review.user_name}</li>
+                                <li key={review.id}>{review.title}</li>
+                                <li key={review.id}>{review.author}</li>
+                                <li key={review.id}>{review.rating}</li>
+                                <li key={review.id}>{review.content}</li>
+                                <li key={review.id}>{review.created}</li>
+                            </p>
+                        )}
                     </section>
                 </section>
                 <section className="search-by-user" onSubmit={this.handleUser}>
@@ -77,7 +89,16 @@ class Reviews extends Component {
                     </section>
                     </form>
                     <section className="users-results">
-                        {/* code results to appear here */}
+                        {reviews.map(review =>
+                            <p>
+                                <li key={review.id}>{review.user_name}</li>
+                                <li key={review.id}>{review.title}</li>
+                                <li key={review.id}>{review.author}</li>
+                                <li key={review.id}>{review.rating}</li>
+                                <li key={review.id}>{review.content}</li>
+                                <li key={review.id}>{review.created}</li>
+                            </p>
+                        )}
                     </section>
                 </section>
             </section>
