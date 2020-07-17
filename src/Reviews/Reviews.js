@@ -34,11 +34,6 @@ class Reviews extends Component {
         })
     }
 
-    // `.then(data => { 
-    //     console.log(data) 
-    //     this.setState({ 
-    //         reviews: [ ...data ] }, ()=>{console.log(this.state.reviews)}) })`
-
     handleUser = e => {
         e.preventDefault()
         const user = e.target['user-input'].value
@@ -65,7 +60,6 @@ class Reviews extends Component {
 
 
     render() {
-        const { reviews=[] } = this.state.reviews
         return (
             <section>
                 <h2>Browse through user insights</h2>
@@ -84,14 +78,14 @@ class Reviews extends Component {
                         </section>
                     </form>
                     <section className="ratings_results">
-                        {reviews.map(review =>
+                        {this.state.reviews.map(review =>
                             <p>
                                 <li key={review.id}>{review.user_name}</li>
-                                <li key={review.id}>{review.title}</li>
-                                <li key={review.id}>{review.author}</li>
-                                <li key={review.id}>{review.rating}</li>
-                                <li key={review.id}>{review.content}</li>
-                                <li key={review.id}>{review.created}</li>
+                                <li key={review.title}>{review.title}</li>
+                                <li key={review.author}>{review.author}</li>
+                                <li key={review.rating}>{review.rating}</li>
+                                <li key={review.content}>{review.content}</li>
+                                <li key={review.created}>{review.created}</li>
                             </p>
                         )}
                     </section>
@@ -105,14 +99,14 @@ class Reviews extends Component {
                     </section>
                     </form>
                     <section className="users-results">
-                        {reviews.map(review =>
+                        {this.state.reviews.map(review =>
                             <p>
                                 <li key={review.id}>{review.user_name}</li>
-                                <li key={review.id}>{review.title}</li>
-                                <li key={review.id}>{review.author}</li>
-                                <li key={review.id}>{review.rating}</li>
-                                <li key={review.id}>{review.content}</li>
-                                <li key={review.id}>{review.created}</li>
+                                <li key={review.title}>{review.title}</li>
+                                <li key={review.author}>{review.author}</li>
+                                <li key={review.rating}>{review.rating}</li>
+                                <li key={review.content}>{review.content}</li>
+                                <li key={review.created}>{review.created}</li>
                             </p>
                         )}
                     </section>
