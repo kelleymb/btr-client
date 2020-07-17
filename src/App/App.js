@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
-import './App.css';
 import Nav from '../Nav/Nav';
 import About from '../About/About';
 import Footer from '../Footer/Footer';
@@ -10,13 +9,11 @@ import SignIn from '../SignIn/SignIn';
 import Dashboard from '../Dashboard/Dashboard';
 import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews'
-// import Context from '../Context'
-
+import './App.css';
 
 function App() {
   
   return (
-    // <Context.Provider value={}>
       <div className="App">
         <Nav />
         <header className="App-header">
@@ -49,7 +46,6 @@ function App() {
           </main>
         <Footer />
       </div>
-    // </Context.Provider>
     );
 }
   

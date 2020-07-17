@@ -54,6 +54,7 @@ class SignUp extends Component {
                         text="User Name"
                         type="text"
                         name="user_name"
+                        aria-required="true"
                     >
                     </input>
                     <label>Email Address</label>
@@ -62,6 +63,7 @@ class SignUp extends Component {
                         text="Email Address"
                         type="email"
                         name="email"
+                        aria-required="true"
                     >
                     </input>
                     <label>Password</label>
@@ -70,12 +72,14 @@ class SignUp extends Component {
                         text="Password"
                         type="password"
                         name="password"
+                        aria-required="true"
                     >
                     </input>
                     <div className="button-div">
                         <button 
                             type="submit" 
-                            className="signup-button">
+                            className="signup-button"
+                            aria-label="Submit-SignUp">
                             Sign Up
                         </button>    
                     </div>

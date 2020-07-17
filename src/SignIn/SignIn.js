@@ -50,6 +50,7 @@ class SignIn extends Component {
                         text="Email Address"
                         type="email"
                         name="email"
+                        aria-required="true"
                     >
                     </input>
                     <label>Password</label>
@@ -58,11 +59,13 @@ class SignIn extends Component {
                         text="Password"
                         type="password"
                         name="password"
+                        aria-required="true"
                     ></input>
                     <div className="button-div">
                         <button 
                         type="submit" 
-                        className="signin-button">
+                        className="signin-button"
+                        aria-label="Submit-SignIn">
                         Sign In
                         </button>
                     </div>

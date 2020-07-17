@@ -63,19 +63,19 @@ class Add extends Component {
                         <p>Enter the username for your account.</p> 
                         <p>Make sure your credentials match!</p>
                         <p> If you prefer anonymity, enter a pseudoname!</p>
-                        <label htmlFor="user-input">Username</label>
+                        <label htmlFor="user-input" aria-required="true">Username</label>
                         <input type="text" id="user-input" name="user-input"/>
                     </div>
                     <div className="field">
-                        <label htmlFor="title-input">Title</label>
+                        <label htmlFor="title-input" aria-required="true">Title</label>
                         <input type="text" id="title-input" name="title-input"/>
                     </div>
                     <div className="field">
-                        <label htmlFor="author-input">Author</label>
+                        <label htmlFor="author-input" aria-required="true">Author</label>
                         <input type="text" id="author-input" name="author-input"/>
                     </div>
                     <div className="field">
-                        <label htmlFor="add-content-input">Content</label>
+                        <label htmlFor="add-content-input" aria-required="true">Content</label>
                         <textarea id="add-content-input" name="add-content"></textarea>
                     </div>
                     <div className="field">
@@ -94,7 +94,7 @@ class Add extends Component {
                         </section>
                         <h4>Given thought to the rating parameters above,</h4>
                         <h4>what rating would you give to this piece?</h4>
-                        <label className="rating-input" htmlFor="rating-input">Rating</label>
+                        <label className="rating-input" htmlFor="rating-input" aria-required="true">Rating</label>
                         <select id="rating-input" name="rating-input">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -104,7 +104,7 @@ class Add extends Component {
                         </select>
                     </div>
                     <div htmlFor="add-review-buttons">
-                        <button type="submit" className="add-button">Submit</button>
+                        <button type="submit" className="add-button" aria-label="Submit">Submit</button>
                     </div>
                 </form>
             </section>
