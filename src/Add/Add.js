@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import config from '../config'
-// import Context from '../Context';
 import './Add.css';
 
 
@@ -11,16 +10,11 @@ class Add extends Component {
             push: () => { }
         },
     }
-    
-    //ADD CONTEXT FROM USER CREDENTIALS
-    // static contextType = Context;
 
-
-    //MUST ADD USER_NAME from signin/signup state
     handleSubmit = e => {
         e.preventDefault();
         const newReview = {
-            user_name: "Lorem",
+            user_name: e.target['user-input'].value,
             title: e.target['title-input'].value,
             author: e.target['author-input'].value,
             content: e.target['add-content'].value,
@@ -41,7 +35,7 @@ class Add extends Component {
             return res
         })
         .then(() => {
-            // this.context.??
+            alert('Your review has been successfully posted!')
             this.props.history.push('/dashboard')
         })
         .catch(error => {
@@ -65,6 +59,13 @@ class Add extends Component {
                     <h4>Do you want to read it again?</h4>
                 </section>
                 <form className="add-review-form" onSubmit={this.handleSubmit}>
+                    <div className="field">
+                        <p>Enter the username for your account.</p> 
+                        <p>Make sure your credentials match!</p>
+                        <p> If you prefer anonymity, enter a pseudoname!</p>
+                        <label htmlFor="user-input">Username</label>
+                        <input type="text" id="user-input" name="user-input"/>
+                    </div>
                     <div className="field">
                         <label htmlFor="title-input">Title</label>
                         <input type="text" id="title-input" name="title-input"/>

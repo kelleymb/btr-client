@@ -10,30 +10,13 @@ import SignIn from '../SignIn/SignIn';
 import Dashboard from '../Dashboard/Dashboard';
 import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews'
-import Context from '../Context'
+// import Context from '../Context'
 
 
 function App() {
   
-  const { reviews } = useState([])
- 
-  // handleAddReview = review => {
-  //   this.setState({
-  //     reviews: [
-  //       ...this.state.reviews,
-  //       review
-  //     ]
-  //   })
-  // }
-
-  
-  // const value = {
-  //   reviews: this.state.reviews,
-  //   // addReview: this.handleAddReview,
-  // }
-
   return (
-    <Context.Provider value={reviews}>
+    // <Context.Provider value={}>
       <div className="App">
         <Nav />
         <header className="App-header">
@@ -66,7 +49,7 @@ function App() {
           </main>
         <Footer />
       </div>
-    </Context.Provider>
+    // </Context.Provider>
     );
 }
   

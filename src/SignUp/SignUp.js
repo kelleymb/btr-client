@@ -4,8 +4,17 @@ import './SignUp.css';
 
 class SignUp extends Component {
     
+
+    static defaultProps = {
+        history: {
+            push: () => { }
+        },
+    }
+
     handleSignUp = e => {
         e.preventDefault();
+      
+    
         const newUser = {
             user_name: e.target['user_name'].value,
             email: e.target['email'].value,
@@ -24,6 +33,10 @@ class SignUp extends Component {
                 return res.json().then(e => Promise.reject(e))
             return res
         })
+        .then(() => {
+            alert('Account creation was successful! You are now being directed to the user sign in page!')
+            this.props.history.push('/signin')
+        })
         .catch(error => {
             console.error({ error })
             console.log(error)
@@ -34,7 +47,7 @@ class SignUp extends Component {
         return (
             <section className="signup">
                 <h1>Sign Up</h1>
-                <form className="signup-form"onSubmit={this.handleSignUp}>
+                <form className="signup-form" onSubmit={this.handleSignUp}>
                     <label>User Name</label>
                     <input 
                         required

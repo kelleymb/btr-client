@@ -6,6 +6,7 @@ class Reviews extends Component {
     
     state = {
         reviews: [],
+        // results: [],
     }
 
     handleRating = e => {
@@ -77,18 +78,6 @@ class Reviews extends Component {
                             <button type="submit" >Search</button>
                         </section>
                     </form>
-                    <section className="ratings_results">
-                        {this.state.reviews.map(review =>
-                            <p>
-                                <li key={review.id}>{review.user_name}</li>
-                                <li key={review.title}>{review.title}</li>
-                                <li key={review.author}>{review.author}</li>
-                                <li key={review.rating}>{review.rating}</li>
-                                <li key={review.content}>{review.content}</li>
-                                <li key={review.created}>{review.created}</li>
-                            </p>
-                        )}
-                    </section>
                 </section>
                 <section className="search-by-user" onSubmit={this.handleUser}>
                     <form className="user-search-form">
@@ -98,15 +87,14 @@ class Reviews extends Component {
                         <button type="submit" >Search</button>
                     </section>
                     </form>
-                    <section className="users-results">
+                    <section className="results">
                         {this.state.reviews.map(review =>
-                            <p>
-                                <li key={review.id}>{review.user_name}</li>
-                                <li key={review.title}>{review.title}</li>
-                                <li key={review.author}>{review.author}</li>
-                                <li key={review.rating}>{review.rating}</li>
-                                <li key={review.content}>{review.content}</li>
-                                <li key={review.created}>{review.created}</li>
+                            <p className="review-result">
+                                <p className="user_name">Username: {review.user_name}</p>
+                                <p className="title">Book Title: {review.title}</p>
+                                <p className="author">Author: {review.author}</p>
+                                <p className="rating">Rating: {review.rating}/5</p>
+                                <p className="content">Content: {review.content}</p>
                             </p>
                         )}
                     </section>

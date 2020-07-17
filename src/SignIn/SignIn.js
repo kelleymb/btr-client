@@ -30,9 +30,8 @@ class SignIn extends Component {
                 return res.json().then(e => Promise.reject(e))
             return res
         })
-        .then(review => {
-        //     this.context.addReview(review)
-            this.props.history.push('/panel')
+        .then(() => {
+            this.props.history.push('/dashboard')
         })
         .catch(error => {
             console.error({ error })
