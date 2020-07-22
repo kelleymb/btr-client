@@ -48,6 +48,7 @@ class SignUp extends Component {
             <section className="signup">
                 <h1>Sign Up</h1>
                 <form className="signup-form" onSubmit={this.handleSignUp}>
+                    <p> If you prefer anonymity, enter a pseudoname!</p>
                     <label>User Name</label>
                     <input 
                         required

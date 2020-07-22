@@ -62,7 +62,6 @@ class Add extends Component {
                     <div className="field">
                         <p>Enter the username for your account.</p> 
                         <p>Make sure your credentials match!</p>
-                        <p> If you prefer anonymity, enter a pseudoname!</p>
                         <label htmlFor="user-input" aria-required="true">Username</label>
                         <input type="text" id="user-input" name="user-input"/>
                     </div>

@@ -16,12 +16,7 @@ class Dashboard extends Component {
     handleSignOut = e => {
         e.preventDefault()
         
-        fetch(`${config.API_ENDPOINT}/signout`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            },
-        })
+        fetch(`${config.API_ENDPOINT}/signout`)
         .then(res => {
             if (!res.ok) 
                 return res.json().then(e => Promise.reject(e))
@@ -37,8 +32,8 @@ class Dashboard extends Component {
         return (
             <section className="dashboard">
                 <ul className="Signout-nav">
-                    <li className="nav" key={this.handleSignOut}>
-                        <Link to="/">Sign Out</Link>
+                    <li className="nav" onClick={this.handleSignOut}>
+                        Sign Out
                     </li>
                 </ul>
                 <section className="add-review">
