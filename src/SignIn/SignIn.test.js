@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import SignIn from './SignIn';
 
+var enzyme = require('enzyme');
+import Adapter from 'enzyme-adapter-react-16';
+enzyme.configure({ adapter: new Adapter() });
+
 describe(`Reviews Component`, () => {
     
     it(`renders without errors`, () => {

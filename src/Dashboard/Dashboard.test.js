@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import Dashboard from './Dashboard';
 
+var enzyme = require('enzyme');
+import Adapter from 'enzyme-adapter-react-16';
+enzyme.configure({ adapter: new Adapter() });
+
 describe(`Panel Component`, () => {
     
     it(`renders without errors`, () => {
