@@ -31,7 +31,7 @@ class Dashboard extends Component {
 
         return (
             <section className="dashboard">
-                <button className="signout-button" onClick={this.handleSignOut}>
+                <button className="signout-button" onClick={this.props.onClick || this.handleSignOut}>
                     Sign Out
                 </button>
                 <section className="add-review">

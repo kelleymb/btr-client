@@ -8,7 +8,7 @@ import SignUp from '../SignUp/SignUp';
 import SignIn from '../SignIn/SignIn';
 import Dashboard from '../Dashboard/Dashboard';
 import Add from '../Add/Add';
-import Reviews from '../Reviews/Reviews'
+import Reviews from '../Reviews/Reviews';
 import './App.css';
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
           </main>
         <Footer />
       </div>
-    );
+  );
 }
   
 
