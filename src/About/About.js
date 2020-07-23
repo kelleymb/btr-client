@@ -5,7 +5,7 @@ class About extends Component {
     
     render() {
         return (
-        <>
+        <section>
             {/* use this section to explain what BTR is and why BTR? */}
             <section className="about">
                 <h2>more than a biased review</h2>
@@ -16,7 +16,7 @@ class About extends Component {
             <section className="howtogetstarted">
 
             </section>
-        </>
+        </section>
         )
     }
 }
