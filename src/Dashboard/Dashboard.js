@@ -31,11 +31,9 @@ class Dashboard extends Component {
 
         return (
             <section className="dashboard">
-                <ul className="Signout-nav">
-                    <li className="nav" onClick={this.handleSignOut}>
-                        Sign Out
-                    </li>
-                </ul>
+                <button className="signout-button" onClick={this.handleSignOut}>
+                    Sign Out
+                </button>
                 <section className="add-review">
                     <h4>What have you read lately? Share your insight with your community.</h4>
                     <ul>

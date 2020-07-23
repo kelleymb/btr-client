@@ -18,7 +18,7 @@ describe(`Panel Component`, () => {
     it(`onClick callback is fired when button is clicked`, () => {
         const callback = jest.fn();
         const wrapper = shallow(<Dashboard onClick={callback}/>);
-        wrapper.find('button').simulate('click');
+        wrapper.find('.signout-button').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
 })

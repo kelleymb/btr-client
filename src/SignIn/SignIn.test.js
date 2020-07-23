@@ -15,9 +15,9 @@ describe(`Reviews Component`, () => {
         ReactDOM.unmountComponentAtNode(section);
     });
 
-    it(`onSubmit callback is fired when form is submitted`, () => {
+    it(`onClick callback is fired when form is submitted`, () => {
         const callback = jest.fn();
-        const wrapper = shallow(<SignIn onSubmit={callback}/>);
+        const wrapper = shallow(<SignIn onClick={callback}/>);
         wrapper.find('button').simulate('click');
         expect(callback).toHaveBeenCalled();
     });

@@ -78,6 +78,7 @@ class SignUp extends Component {
                     </input>
                     <div className="button-div">
                         <button 
+                            onClick={this.props.onClick}
                             type="submit" 
                             className="signup-button"
                             aria-label="Submit-SignUp">

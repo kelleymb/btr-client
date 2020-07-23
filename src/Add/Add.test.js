@@ -7,7 +7,7 @@ var enzyme = require('enzyme');
 import Adapter from 'enzyme-adapter-react-16';
 enzyme.configure({ adapter: new Adapter() });
 
-describe.only(`Add Component`, () => {
+describe(`Add Component`, () => {
     
     it(`renders without errors`, () => {
         const section = document.createElement('section');
@@ -17,8 +17,8 @@ describe.only(`Add Component`, () => {
     
     it(`onSubmit callback is fired when button is clicked`, () => {
         const callback = jest.fn();
-        const wrapper = shallow(<Add onSubmit={callback}/>);
-        wrapper.find('add-button').simulate('click');
+        const wrapper = shallow(<Add onClick={callback}/>);
+        wrapper.find('.add-button').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
 });

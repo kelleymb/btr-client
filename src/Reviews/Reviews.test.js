@@ -7,7 +7,7 @@ var enzyme = require('enzyme');
 import Adapter from 'enzyme-adapter-react-16';
 enzyme.configure({ adapter: new Adapter() });
 
-describe.only(`Reviews Component`, () => {
+describe(`Reviews Component`, () => {
     
     it(`renders without errors`, () => {
         const section = document.createElement('section');
@@ -15,19 +15,17 @@ describe.only(`Reviews Component`, () => {
         ReactDOM.unmountComponentAtNode(section);
     });
 
-    it(`Rating Search, onSubmit callback is fired when form is submitted`, () => {
+    it(`Rating Search, onClick callback is fired when form is submitted`, () => {
         const callback = jest.fn();
-        const wrapper = shallow(<Reviews onSubmit={callback}/>);
-        wrapper.update()
-        wrapper.find('rating-search-form').simulate('click');
+        const wrapper = shallow(<Reviews onClick={callback}/>);
+        wrapper.find('.rating-submit').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
 
-    it(`User Search, onSubmit callback is fired when form is submitted`, () => {
+    it(`User Search, onClick callback is fired when form is submitted`, () => {
         const callback = jest.fn();
-        const wrapper = shallow(<Reviews onSubmit={callback}/>);
-        wrapper.update()
-        wrapper.find('user-search-form').simulate('click');
+        const wrapper = shallow(<Reviews onClick={callback}/>);
+        wrapper.find('.user-submit').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
 })

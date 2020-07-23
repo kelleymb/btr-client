@@ -77,7 +77,13 @@ class Reviews extends Component {
                             <option value="1">1 Star Reviews</option>
                         </select>
                         <section className="rating-button">
-                            <button type="submit" aria-label="Submit-Search">Search</button>
+                            <button 
+                                onClick={this.props.onClick}
+                                className="rating-submit" 
+                                type="submit" 
+                                aria-label="Submit-Search">
+                            Search
+                            </button>
                         </section>
                     </form>
                 </section>
@@ -86,7 +92,13 @@ class Reviews extends Component {
                     <label htmlFor="user-input" aria-required="true">Search by User Name</label>
                     <input required text='Search by User Name' type='text' name='user-input'></input>
                     <section className="user-search-button">
-                        <button type="submit" aria-label="Submit-Search">Search</button>
+                        <button 
+                            onClick={this.props.onClick}
+                            className="user-submit" 
+                            type="submit" 
+                            aria-label="Submit-Search">
+                        Search
+                        </button>
                     </section>
                     </form>
                     <section className="results">

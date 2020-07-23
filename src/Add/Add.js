@@ -103,7 +103,13 @@ class Add extends Component {
                         </select>
                     </div>
                     <div htmlFor="add-review-buttons">
-                        <button type="submit" className="add-button" aria-label="Submit">Submit</button>
+                        <button 
+                            onClick={this.props.onClick}
+                            type="submit" 
+                            className="add-button" 
+                            aria-label="Submit" >
+                        Submit
+                        </button>
                     </div>
                 </form>
             </section>

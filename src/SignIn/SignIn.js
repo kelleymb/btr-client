@@ -62,10 +62,11 @@ class SignIn extends Component {
                         aria-required="true"
                     ></input>
                     <div className="button-div">
-                        <button 
-                        type="submit" 
-                        className="signin-button"
-                        aria-label="Submit-SignIn">
+                        <button
+                            onClick={this.props.onClick} 
+                            type="submit" 
+                            className="signin-button"
+                            aria-label="Submit-SignIn">
                         Sign In
                         </button>
                     </div>
