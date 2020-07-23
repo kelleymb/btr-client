@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import Add from './Add';
 
+var enzyme = require('enzyme');
+import Adapter from 'enzyme-adapter-react-16';
+enzyme.configure({ adapter: new Adapter() });
 
-describe(`Add Component`, () => {
+describe.only(`Add Component`, () => {
     
     it(`renders without errors`, () => {
         const section = document.createElement('section');
@@ -12,9 +15,9 @@ describe(`Add Component`, () => {
         ReactDOM.unmountComponentAtNode(section);
     });
     
-    it(`onClick callback is fired when button is clicked`, () => {
+    it(`onSubmit callback is fired when button is clicked`, () => {
         const callback = jest.fn();
-        const wrapper = shallow(<Add onClick={callback}/>);
+        const wrapper = shallow(<Add onSubmit={callback}/>);
         wrapper.find('button').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
