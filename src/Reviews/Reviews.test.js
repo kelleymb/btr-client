@@ -19,7 +19,7 @@ describe.only(`Reviews Component`, () => {
         const callback = jest.fn();
         const wrapper = shallow(<Reviews onSubmit={callback}/>);
         wrapper.update()
-        wrapper.find('rating-button').simulate('click');
+        wrapper.find('rating-search-form').simulate('click');
         expect(callback).toHaveBeenCalled();
     });
 
