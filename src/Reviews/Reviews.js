@@ -90,7 +90,7 @@ class Reviews extends Component {
                 <section className="search-by-user" onSubmit={this.handleUser}>
                     <form className="user-search-form">
                     <label htmlFor="user-input" aria-required="true">Search by User Name</label>
-                    <input required text='Search by User Name' type='text' name='user-input'></input>
+                    <input required placeholder='Lorem21' type='text' name='user-input'></input>
                     <section className="user-search-button">
                         <button 
                             onClick={this.props.onClick}

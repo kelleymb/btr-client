@@ -54,8 +54,11 @@ class Add extends Component {
                     <h4>Let us know...</h4>
                     <h4>Would you recommend this book to others?</h4>
                     <h4>Did it live up to your expectations?</h4>
-                    <h4>Did you laugh? Cry?</h4>
+                    <h4>Did you laugh? Cry? Think?</h4>
                     <h4>Did it affect you?</h4>
+                    <h4>Did you care about the characters?</h4>
+                    <h4>Was the dialogue believable?</h4>
+                    <h4>Did any quotes strike you?</h4>
                     <h4>Do you want to read it again?</h4>
                 </section>
                 <form className="add-review-form" onSubmit={this.handleSubmit}>

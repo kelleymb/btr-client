@@ -6,6 +6,11 @@ section {
     text-align: center;
 }
 
-li {
-    text-decoration: none;
+.signout-button {
+    float: right;
+}
+
+.signout-button:hover {
+    font-size: 18px;
+    color: red;
 }
