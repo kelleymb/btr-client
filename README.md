@@ -1,5 +1,7 @@
 ## Born To Read Client
 
+This is the client repo for Born To Read. You can find the live app at: https://btr-client.kelleymb.vercel.app/
+
 ### Introduction to BTR
 
 BTR was created to change the way readers both post and read reviews. 
