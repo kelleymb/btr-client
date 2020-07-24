@@ -7,7 +7,7 @@ section {
 }
 
 .signout-button {
-    float: right;
+    float: center;
 }
 
 .signout-button:hover {

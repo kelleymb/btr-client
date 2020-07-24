@@ -31,6 +31,7 @@ class SignIn extends Component {
             return res
         })
         .then(() => {
+            alert('Sign in successful! You are now being redirected to the Dashboard.')
             this.props.history.push('/dashboard')
         })
         .catch(error => {
