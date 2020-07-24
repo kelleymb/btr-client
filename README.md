@@ -27,7 +27,7 @@ Demo Password: Lorem21
 - Jest
 
 #### Production
--Deployed via Vercel
+- Deployed via Vercel
 
 ### Getting Started
 
