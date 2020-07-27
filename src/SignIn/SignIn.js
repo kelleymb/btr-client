@@ -11,9 +11,9 @@ class SignIn extends Component {
         },
     }
 
-    // state = {
-        
-    // }
+    state = {
+        token: 0
+    }
 
     handleSignIn = e => {
         e.preventDefault();
@@ -35,7 +35,13 @@ class SignIn extends Component {
             return res
         })
         .then(data => {
-            console.log(data.headers.get("Token"))
+            console.log(data.headers.get('Token'))
+            const token = data.headers.get('Token')
+            this.setState({
+                token: token
+            })
+            console.log(this.state.token)
+            localStorage.setItem('Token', token)
         })
         .then(() => {
             alert('Sign in successful! You are now being redirected to the Dashboard.')
