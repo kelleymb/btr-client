@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Born To Read Client
 
-## Available Scripts
+This is the client repo for Born To Read. You can find the live app at: https://btr-client.kelleymb.vercel.app/
 
-In the project directory, you can run:
+### Introduction to BTR
 
-### `npm start`
+BTR was created to change the way readers both post and read reviews. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Our unique rating system promotes users to share more than just another biased review and be as objective as possible.  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+BTR is a spoiler free zone, where all book connoisseurs can come together to share and browse through an insightful collection of reviews.
 
-### `npm test`
+### Demo Account Information
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Demo Email: Lorem21@gmail.com
+Demo Password: Lorem21
 
-### `npm run build`
+### Application Demo
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add pictures here of live app
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Technology
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Front End
+- React
+  - Create React App
+  - React Router
+- HTML5
+- CSS3 (scratch- no frameworks)
 
-### `npm run eject`
+#### Testing
+- Enzyme
+- Jest
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Production
+- Deployed via Vercel
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Run npm install to load dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run npm test to ensure a stable build
 
-## Learn More
+This is only the front end client, so develop locally you'll need the backend server as well.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To get the backend up and running see https://github.com/kelleymb/btr-api
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Deployments are handled through Vercel and can be run via npm run deploy
