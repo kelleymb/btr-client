@@ -5,6 +5,8 @@ import Reviews from '../Reviews/Reviews';
 import config from '../config';
 import './Dashboard.css';
 
+// needs to know if there is an existing session
+
 class Dashboard extends Component {
     
     static defaultProps = {

@@ -11,6 +11,10 @@ class SignIn extends Component {
         },
     }
 
+    // state = {
+        
+    // }
+
     handleSignIn = e => {
         e.preventDefault();
         const userCred = {
@@ -29,6 +33,9 @@ class SignIn extends Component {
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res
+        })
+        .then(data => {
+            console.log(data.headers.get("Token"))
         })
         .then(() => {
             alert('Sign in successful! You are now being redirected to the Dashboard.')
