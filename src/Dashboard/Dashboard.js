@@ -13,6 +13,18 @@ class Dashboard extends Component {
         },
     }
 
+    dipslayAdd = () => {
+        const token = localStorage.getItem('Token')
+        return (
+            <section className={token ? "add-review" : "hide"}>
+                <h4>What have you read lately? Share your insight with your community.</h4>
+                <ul>
+                    <li key={Add}><Link to="/add">Add a review</Link></li>
+                </ul>    
+            </section>
+        )
+    }
+
     displaySignOut = () => {
         const token = localStorage.getItem('Token')
         return (
@@ -45,17 +57,11 @@ class Dashboard extends Component {
         return (
             <section className="dashboard">
                 {this.displaySignOut()}
-                <section className="add-review">
-                    <h4>What have you read lately? Share your insight with your community.</h4>
-                    <ul>
-                        <li key={Add}><Link to="/add">Add a review</Link></li>
-                    </ul>    
-                </section>
+                {this.dipslayAdd()}
                 <section className="view-reviews">
                     <h4>Curious what's in the blogosphere?</h4>
                     <Reviews />
                 </section>
-                
             </section>
             
         )
