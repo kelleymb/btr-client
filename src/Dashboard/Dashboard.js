@@ -44,6 +44,7 @@ class Dashboard extends Component {
 
         return (
             <section className="dashboard">
+                {this.displaySignOut()}
                 <section className="add-review">
                     <h4>What have you read lately? Share your insight with your community.</h4>
                     <ul>
@@ -54,7 +55,7 @@ class Dashboard extends Component {
                     <h4>Curious what's in the blogosphere?</h4>
                     <Reviews />
                 </section>
-                {this.displaySignOut()}
+                
             </section>
             
         )
