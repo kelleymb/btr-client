@@ -17,3 +17,7 @@ ul {
     font-size: 22px;
     background-color: lightblue;
 }
+
+.hide {
+    display: none;
+}

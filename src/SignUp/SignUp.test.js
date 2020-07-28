@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
 import SignUp from './SignUp';
 
 var enzyme = require('enzyme');
@@ -11,7 +12,7 @@ describe(`SignUp Component`, () => {
     
     it(`renders without errors`, () => {
         const section = document.createElement('section');
-        ReactDOM.render(<SignUp />, section);
+        ReactDOM.render(<BrowserRouter><SignUp /></BrowserRouter>, section);
         ReactDOM.unmountComponentAtNode(section);
     });
 

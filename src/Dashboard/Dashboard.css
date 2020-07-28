@@ -7,10 +7,19 @@ section {
 }
 
 .signout-button {
-    float: center;
+    float: right;
 }
 
 .signout-button:hover {
     font-size: 18px;
     color: red;
 }
+
+.hide {
+    display: none;
+}
+
+/* .view-reviews {
+    display: flex;
+    flex-direction: column;
+} */
