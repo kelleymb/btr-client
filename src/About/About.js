@@ -6,7 +6,7 @@ class About extends Component {
     
     render() {
         return (
-        <section>
+        <section className="about">
             <section className="why-about-section">
                 <h2>Why use Born To Read?</h2>
                 <p>

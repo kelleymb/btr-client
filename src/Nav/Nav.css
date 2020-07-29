@@ -1,23 +1,42 @@
 ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
     font-weight: lighter;
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     overflow: hidden;
     list-style-type: none;
 }
 
 .nav {
-    float: right;
     padding: 5px;
+    color: darkgreen;
 }
 
 .nav:hover {
-    font-size: 22px;
-    background-color: lightblue;
+    font-size: 26px;
+    color: white;
+    background-color: rgb(138, 196, 183);
 }
 
 .hide {
     display: none;
+}
+
+@media screen and (min-width:425px) {
+
+    ul {
+        float: right;
+        font-size: 23px;
+    }
+
+    .nav:hover {
+        font-size: 29px;
+        color: white;
+        background-color: rgb(138, 196, 183);
+    }
+
 }

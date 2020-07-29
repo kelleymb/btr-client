@@ -29,7 +29,6 @@ class Add extends Component {
             body: JSON.stringify(newReview),
         })
         .then(res => {
-            console.log(res)
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res
@@ -40,7 +39,6 @@ class Add extends Component {
         })
         .catch(error => {
             console.error({ error })
-            console.log(error)
         })
     }
 

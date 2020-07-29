@@ -1,35 +1,25 @@
-/* these are not centering at 300px */
-.rating-search-form, .user-search-form  {
-    display: inline-block;
+.reviews-section {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.search-by-rating, .search-by-user, .results {
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-h2 {
-    text-align: center;
-}
-
-label {
-    text-align: center;
-    font-size: 18px;
-}
-
-select, input {
-    font-size: 16px;
-    width: 250px;
-    height: auto;
-    padding: 10px;
-}
-
-option, input {
-    padding: 10px;
-}
-
-.rating-button, .user-search-button {
+.rating-search-form  {
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
+    height: 150px;
 }
 
-.review-result {
-    padding: 10px;
+.user-search-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    height: 150px;
 }
+

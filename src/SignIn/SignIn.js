@@ -29,18 +29,15 @@ class SignIn extends Component {
             body: JSON.stringify(userCred)
         })  
         .then(res => {
-            console.log(res)
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res
         })
         .then(data => {
-            console.log(data.headers.get('Token'))
             const token = data.headers.get('Token')
             this.setState({
                 token: token
             })
-            console.log(this.state.token)
             localStorage.setItem('Token', token)
         })
         .then(() => {
@@ -49,7 +46,6 @@ class SignIn extends Component {
         })
         .catch(error => {
             console.error({ error })
-            console.log(error)
         })
     }
 
