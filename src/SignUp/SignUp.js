@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import config from '../config'
+import ErrorBoundary from '../ErrorBoundary';
 import './SignUp.css';
 
 class SignUp extends Component {
@@ -44,49 +45,51 @@ class SignUp extends Component {
 
     render() {
         return (
-            <section className="signup">
-                <h1>Sign Up</h1>
-                <form className="signup-form" onSubmit={this.handleSignUp}>
-                    <p> If you prefer anonymity, enter a pseudoname!</p>
-                    <label>User Name</label>
-                    <input 
-                        required
-                        text="User Name"
-                        type="text"
-                        name="user_name"
-                        aria-required="true"
-                    >
-                    </input>
-                    <label>Email Address</label>
-                    <input 
-                        required
-                        text="Email Address"
-                        type="email"
-                        name="email"
-                        aria-required="true"
-                    >
-                    </input>
-                    <label>Password</label>
-                    <input
-                        required
-                        text="Password"
-                        type="password"
-                        name="password"
-                        aria-required="true"
-                    >
-                    </input>
-                    <div className="button-div">
-                        <button 
-                            onClick={this.props.onClick}
-                            type="submit" 
-                            className="signup-button"
-                            aria-label="Submit-SignUp">
-                            Sign Up
-                        </button>    
-                    </div>
-                    <div><p>Already have an account? <Link to="/signin">Sign In</Link></p></div>
-                </form>
-            </section>
+            <ErrorBoundary>
+                <section className="signup">
+                    <h1>Sign Up</h1>
+                    <form className="signup-form" onSubmit={this.handleSignUp}>
+                        <p> If you prefer anonymity, enter a pseudoname!</p>
+                        <label>User Name</label>
+                        <input 
+                            required
+                            text="User Name"
+                            type="text"
+                            name="user_name"
+                            aria-required="true"
+                        >
+                        </input>
+                        <label>Email Address</label>
+                        <input 
+                            required
+                            text="Email Address"
+                            type="email"
+                            name="email"
+                            aria-required="true"
+                        >
+                        </input>
+                        <label>Password</label>
+                        <input
+                            required
+                            text="Password"
+                            type="password"
+                            name="password"
+                            aria-required="true"
+                        >
+                        </input>
+                        <div className="button-div">
+                            <button 
+                                onClick={this.props.onClick}
+                                type="submit" 
+                                className="signup-button"
+                                aria-label="Submit-SignUp">
+                                Sign Up
+                            </button>    
+                        </div>
+                        <div><p>Already have an account? <Link to="/signin">Sign In</Link></p></div>
+                    </form>
+                </section>
+            </ErrorBoundary>
         )
     }
 }
