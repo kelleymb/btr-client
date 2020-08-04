@@ -61,51 +61,68 @@ class Reviews extends Component {
             <ErrorBoundary>
                 <section className="reviews-section">
                     <h2>Browse through user insights</h2>
-                    <section className="search-by-rating">
-                        <form className="rating-search-form" onSubmit={this.handleRating}>
-                            <label htmlFor="rating-input" aria-required="true">Search by Review Rating</label>
-                            <select id="rating-input" name="rating-input">
-                                <option value="5">5 Star Reviews</option>
-                                <option value="4">4 Star Reviews</option>
-                                <option value="3">3 Star Reviews</option>
-                                <option value="2">2 Star Reviews</option>
-                                <option value="1">1 Star Reviews</option>
-                            </select>
-                            <section className="rating-button">
+                    <section className="search-section">
+                        <section className="search-by-rating">
+                            <form className="rating-search-form" onSubmit={this.handleRating}>
+                                <label htmlFor="rating-input" aria-required="true">Search by Rating</label>
+                                <select required id="rating-input" name="rating-input">
+                                    <option value="5">5 Star Reviews</option>
+                                    <option value="4">4 Star Reviews</option>
+                                    <option value="3">3 Star Reviews</option>
+                                    <option value="2">2 Star Reviews</option>
+                                    <option value="1">1 Star Reviews</option>
+                                </select>
+                                <section className="rating-button">
+                                    <button 
+                                        onClick={this.props.onClick}
+                                        className="rating-submit" 
+                                        type="submit" 
+                                        aria-label="Submit-Search">
+                                    Search
+                                    </button>
+                                </section>
+                            </form>
+                        </section>
+                        <section className="search-by-user" onSubmit={this.handleUser}>
+                            <form className="user-search-form">
+                            <label htmlFor="user-input" aria-required="true">Search by User Name</label>
+                            <input required placeholder='Lorem21' type='text' name='user-input'></input>
+                            <section className="user-search-button">
                                 <button 
                                     onClick={this.props.onClick}
-                                    className="rating-submit" 
+                                    className="user-submit" 
                                     type="submit" 
                                     aria-label="Submit-Search">
                                 Search
                                 </button>
                             </section>
-                        </form>
-                    </section>
-                    <section className="search-by-user" onSubmit={this.handleUser}>
-                        <form className="user-search-form">
-                        <label htmlFor="user-input" aria-required="true">Search by User Name</label>
-                        <input required placeholder='Lorem21' type='text' name='user-input'></input>
-                        <section className="user-search-button">
-                            <button 
-                                onClick={this.props.onClick}
-                                className="user-submit" 
-                                type="submit" 
-                                aria-label="Submit-Search">
-                            Search
-                            </button>
+                            </form>
                         </section>
-                        </form>
                     </section>
                     <section className="results">
                         {this.state.reviews.map(review =>
                             <div className="review-result">
-                                <div className="user_name">Username: {review.user_name}</div>
-                                <div className="title">Book Title: {review.title}</div>
-                                <div className="author">Author: {review.author}</div>
-                                <div className="rating">Rating: {review.rating}/5</div>
-                                <div className="content">Content: {review.content}</div>
-                        </div>
+                                <div className="user_name">
+                                    <h4 className="user_heading">Username:</h4> 
+                                    <p>{review.user_name}</p>
+                                </div>
+                                <div className="title">
+                                    <h4 className="title_heading">Book Title:</h4> 
+                                    <p>{review.title}</p>
+                                </div>
+                                <div className="author">
+                                    <h4 className="author_heading">Author:</h4> 
+                                    <p>{review.author}</p>
+                                </div>
+                                <div className="rating">
+                                    <h4 className="rating_heading">Rating:</h4> 
+                                    <p>{review.rating}/5</p>
+                                </div>
+                                <div className="content">
+                                    <h4 className="content_heading">Content:</h4>
+                                    <p>{review.content}</p> 
+                                </div>
+                            </div>
                         )}
                     </section>
                 </section>

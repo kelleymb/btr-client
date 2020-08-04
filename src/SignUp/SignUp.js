@@ -49,7 +49,7 @@ class SignUp extends Component {
                 <section className="signup">
                     <h1>Sign Up</h1>
                     <form className="signup-form" onSubmit={this.handleSignUp}>
-                        <p> If you prefer anonymity, enter a pseudoname!</p>
+                        <p className="notice">If you prefer anonymity, enter a pseudoname!</p>
                         <label>User Name</label>
                         <input 
                             required
@@ -86,7 +86,7 @@ class SignUp extends Component {
                                 Sign Up
                             </button>    
                         </div>
-                        <div><p>Already have an account? <Link to="/signin">Sign In</Link></p></div>
+                        <div className="link-to-signin"><p>Already have an account? <Link to="/signin">Sign In</Link></p></div>
                     </form>
                 </section>
             </ErrorBoundary>

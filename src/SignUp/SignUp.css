@@ -28,3 +28,7 @@ label {
     font-size: medium;
     padding: 5px;
 }
+
+.link-to-signin, .notice {
+    margin: 0 auto;
+}

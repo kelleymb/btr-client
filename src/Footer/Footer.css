@@ -1,6 +1,8 @@
 .footer {
-    text-align: center;
-    padding: 20px;
+    display: block;
+	margin: auto;
+	width: 40%;
+    padding: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
