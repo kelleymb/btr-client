@@ -1,11 +1,18 @@
+/* .hide {
+    display: none;
+} */
+
 .add-page {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     font-size: 50px;
+}
+
+h2 {
+    text-align: center;
 }
 
 .guide-section {
@@ -23,9 +30,6 @@ input {
     margin-right: auto;
 }
 
-label {
-    padding: 15px;
-}
 
 label::before {
     content: "\A";
@@ -52,5 +56,43 @@ div {
 }
 
 textarea {
+    margin-top: 15px;
     height: 300px;
+}
+
+.user-input {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 550px) {
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    input {
+        width: 350px;
+        height: 50px;
+    }
+
+    textarea {
+        width: 315px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    
 }

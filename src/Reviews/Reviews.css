@@ -39,6 +39,8 @@ input {
     padding: 3px;
     border: 2px solid;
     height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 p {
@@ -60,6 +62,8 @@ footer {
 
     .review-result {
         padding: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .results {
@@ -75,7 +79,10 @@ footer {
         display: flex;
         align-items: flex-end;
         text-align: left;
-        line-height: 25px;
     }
+}
+
+@media screen and (min-width: 800px) {
+    
 }
 
