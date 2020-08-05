@@ -15,6 +15,7 @@ function App() {
   
   return (
       <div className="App">
+        <img alt="scenic-view-and-book" src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&w=1000&q=80"></img>
         <Nav />
         <header className="App-header">
           <h1>Born To Read</h1>

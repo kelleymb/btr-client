@@ -2,5 +2,12 @@
     padding: 15px;
 }
 
+@media screen and (min-width: 650px) {
+    .about {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
 
 

@@ -11,10 +11,6 @@ class Add extends Component {
         },
     }
 
-    // state = {
-    //     showSection: true
-    // }
-
     handleSubmit = e => {
         e.preventDefault();
         const newReview = {
@@ -46,40 +42,22 @@ class Add extends Component {
         })
     }
 
-    // handleDisplayGuide = e => {
-    //     <section className={this.state.showSection ? "guide-section" : "hide"}>
-    //         <button onClick={this.props.onClick || this.handleDisplayGuide}>Let us know...</button>
-    //         <h4>Would you recommend this book to others?</h4>
-    //         <h4>Did it live up to your expectations?</h4>
-    //         <h4>Did you laugh? Cry? Think?</h4>
-    //         <h4>Did it affect you?</h4>
-    //         <h4>Did you care about the characters?</h4>
-    //         <h4>Was the dialogue believable?</h4>
-    //         <h4>Did any quotes strike you?</h4>
-    //         <h4>Do you want to read it again?</h4>
-    //     </section>
-    // }
-
-    // handleDisplayQualities = e => {
-
-    // }
-
     render() {
     
         return (
             <ErrorBoundary>
                 <section className="add-page">
-                    <h1>Add a Review</h1>
+                    <h1 className="add-hdr">Add a Review</h1>
                     <h2>You are entering a spoiler free zone</h2>
                     <section className="guide-section">
-                        <h4>Would you recommend this book to others?</h4>
-                        <h4>Did it live up to your expectations?</h4>
-                        <h4>Did you laugh? Cry? Think?</h4>
-                        <h4>Did it affect you?</h4>
-                        <h4>Did you care about the characters?</h4>
-                        <h4>Was the dialogue believable?</h4>
-                        <h4>Did any quotes strike you?</h4>
-                        <h4>Do you want to read it again?</h4>
+                        <h4 className="question">Would you recommend this book to others?</h4>
+                        <h4 className="question">Did it live up to your expectations?</h4>
+                        <h4 className="question">Did you laugh? Cry? Think?</h4>
+                        <h4 className="question">Did it affect you?</h4>
+                        <h4 className="question">Did you care about the characters?</h4>
+                        <h4 className="question">Was the dialogue believable?</h4>
+                        <h4 className="question">Did any quotes strike you?</h4>
+                        <h4 className="question">Do you want to read it again?</h4>
                     </section>
                     <form className="add-review-form" onSubmit={this.handleSubmit}>
                         <div className="user-field">
@@ -99,7 +77,7 @@ class Add extends Component {
                             <textarea id="add-content-input" name="add-content"></textarea>
                         </div>
                         <div className="rating-field">
-                            <h3>Qualities of a...</h3>
+                            <h3 className="qualities">Qualities of a...</h3>
                             <section className="rating-guide">
                                 <h4 className="five-star">5 star rating</h4>
                                     <h5>An absolute masterpiece, impactful, a must read</h5>

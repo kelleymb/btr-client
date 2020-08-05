@@ -14,10 +14,11 @@ select {
 }
 
 input {
+    text-align: center;
     padding: 10px;
     margin: 15px;
     font-size: 16px;
-    text-align: center;
+    font-weight: bolder;
 }
 
 .rating-search-form  {
@@ -51,7 +52,30 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 650px) {
+
+    .search-by-rating, .search-by-user {
+        padding: 0;
+    }
+
+    select {
+        height: 75px;
+        width: 200px;
+    }
+    
+    input {
+        height: 53px;
+    }
+
+    .user-search-button, .rating-button {
+        padding: 10px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+    }
+
     .search-section {
         display: flex;
         justify-content: center;
@@ -62,8 +86,8 @@ footer {
 
     .review-result {
         padding: 40px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 100px;
+        margin-bottom: 35px;
     }
 
     .results {
@@ -82,7 +106,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
     
-}
+} */
 

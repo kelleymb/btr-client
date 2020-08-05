@@ -19,7 +19,16 @@ section {
     display: none;
 }
 
-/* .view-reviews {
-    display: flex;
-    flex-direction: column;
-} */
+@media screen and (min-width: 650px) {
+    h4 {
+        font-size: 22px;
+        margin-bottom: -30px;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    h4 {
+        font-size: 24px;
+    }
+}

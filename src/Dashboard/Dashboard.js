@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom';
-import Add from '../Add/Add';
+// import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews';
 import config from '../config';
 import './Dashboard.css';
@@ -17,10 +17,7 @@ class Dashboard extends Component {
         const token = localStorage.getItem('Token')
         return (
             <section className={token ? "add-review" : "hide"}>
-                <h4>What have you read lately? Share your insight with your community.</h4>
-                <ul>
-                    <li key={Add}><Link to="/add">Add a review</Link></li>
-                </ul>    
+                <h4>Share your insight with your community.<Link to="/add">Add a review</Link></h4>
             </section>
         )
     }
@@ -59,7 +56,6 @@ class Dashboard extends Component {
                 {this.displaySignOut()}
                 {this.dipslayAdd()}
                 <section className="view-reviews">
-                    <h4>Curious what's in the blogosphere?</h4>
                     <Reviews />
                 </section>
             </section>

@@ -1,19 +1,19 @@
-/* .hide {
-    display: none;
-} */
-
 .add-page {
     box-sizing: border-box;
 }
 
-h1 {
+.add-hdr {
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
     padding: 25px;
 }
 
 h2 {
     text-align: center;
+}
+
+.qualities {
+    margin-bottom: -35px;
 }
 
 .guide-section {
@@ -31,7 +31,6 @@ input {
     margin-right: auto;
 }
 
-
 label::before {
     content: "\A";
     white-space: pre;
@@ -44,6 +43,7 @@ label::after {
 
 .rating-input {
     padding: 5px;
+    margin-top: 0;
 }
 
 .add-button {
@@ -70,6 +70,15 @@ textarea {
 
 @media screen and (min-width: 550px) {
 
+    .qualities {
+        font-size: 25px;
+    }
+
+    .question {
+        font-size: 17px;
+        padding: 5px;
+    }
+
     h4 {
         font-size: 18px;
     }
@@ -95,6 +104,11 @@ textarea {
 }
 
 @media screen and (min-width: 640px) {
+
+    .question {
+        font-size: 20px;
+    }
+
     .guide-section {
         justify-content: center;
         align-items: center;
@@ -111,6 +125,7 @@ textarea {
 }
 
 @media screen and (min-width: 800px) {
+
     .guide-section {
         display: flex;
         padding: 50px;
