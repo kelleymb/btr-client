@@ -9,6 +9,7 @@
 h1 {
     text-align: center;
     font-size: 50px;
+    padding: 25px;
 }
 
 h2 {
@@ -93,6 +94,57 @@ textarea {
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 640px) {
+    .guide-section {
+        justify-content: center;
+        align-items: center;
+    }
     
+    .rating-guide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 100%
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .guide-section {
+        display: flex;
+        padding: 50px;
+    }
+
+    .user-input {
+        margin-bottom: -15px;
+    }
+
+    .user-field, .title-field, .author-field {
+        display: inline-block;
+    }
+
+    textarea {
+        width: 75%;
+    }
+
+    h2, h3 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .rating-guide {
+        display: flex;
+        padding: 50px;
+        font-size: 20px;
+    }
+
+    .rating-field {
+        display: inline-block;
+    }
 }
