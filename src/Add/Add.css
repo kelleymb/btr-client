@@ -12,8 +12,11 @@ h2 {
     text-align: center;
 }
 
-.qualities {
-    margin-bottom: -35px;
+.qualities, .rating-guide {
+    background: cornsilk;
+    opacity: 0.8;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .guide-section {
@@ -79,12 +82,12 @@ textarea {
         padding: 5px;
     }
 
-    h4 {
-        font-size: 18px;
+    .five-star, .four-star, .three-star, .two-star, .one-star {
+        font-size: 22px;
     }
 
-    h5 {
-        font-size: 16px;
+    .desc {
+        font-size: 19px;
     }
 
     label {
@@ -143,14 +146,9 @@ textarea {
         width: 75%;
     }
 
-    h2, h3 {
+    .spoiler, .qualities {
         font-size: 30px;
         margin-bottom: 0;
-    }
-
-    h4 {
-        padding: 5px;
-        margin: 5px;
     }
 
     .rating-guide {

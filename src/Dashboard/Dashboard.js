@@ -1,6 +1,5 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Add from '../Add/Add';
 import Reviews from '../Reviews/Reviews';
 import config from '../config';
 import './Dashboard.css';
@@ -17,7 +16,7 @@ class Dashboard extends Component {
         const token = localStorage.getItem('Token')
         return (
             <section className={token ? "add-review" : "hide"}>
-                <h4>Share your insight with your community.<Link to="/add">Add a review</Link></h4>
+                <h4 className="add-link-section">Share your insight with your community. <Link className="link" to="/add">Add a review</Link></h4>
             </section>
         )
     }

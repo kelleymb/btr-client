@@ -86,7 +86,7 @@ class SignUp extends Component {
                                 Sign Up
                             </button>    
                         </div>
-                        <div className="link-to-signin"><p>Already have an account? <Link to="/signin">Sign In</Link></p></div>
+                        <div className="link-to-signin"><p>Already have an account? <Link className="link" to="/signin">Sign In</Link></p></div>
                     </form>
                 </section>
             </ErrorBoundary>

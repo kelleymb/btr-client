@@ -29,6 +29,35 @@ label {
     padding: 5px;
 }
 
+.signup-button:hover {
+    font-size: larger;
+    color: white;
+    background: black;
+    transition-property: inherit;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    border-radius: 30%;
+}
+
+.link-to-signin {
+    font-size: 20px;
+}
+
+.notice {
+    font-size: 18px;
+}
+
 .link-to-signin, .notice {
     margin: 0 auto;
 }
+
+.link-to-signin:hover {
+    font-size: 25px;
+}
+
+.link:hover {
+    font-size: 25px;
+    color: white;
+    background:  black;
+}
+    

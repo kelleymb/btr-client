@@ -42,6 +42,7 @@ input {
     height: auto;
     margin-top: 25px;
     margin-bottom: 25px;
+    background: whitesmoke;
 }
 
 p {
@@ -50,6 +51,16 @@ p {
 
 footer {
     text-align: center;
+}
+
+button:hover {
+    font-size: larger;
+    color: whitesmoke;
+    background: black;
+    transition-property: inherit;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    border-radius: 30%;
 }
 
 @media screen and (min-width: 650px) {
@@ -97,16 +108,14 @@ footer {
     .user_heading, .title_heading, .author_heading, .rating_heading, .content_heading {
         display: flex;
         align-items: flex-start;
+        padding: 10px;
     }
 
     p {
         display: flex;
         align-items: flex-end;
         text-align: left;
+        padding: 8px;
     }
 }
-
-/* @media screen and (min-width: 800px) {
-    
-} */
 

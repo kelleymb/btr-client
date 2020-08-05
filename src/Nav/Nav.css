@@ -4,7 +4,6 @@ ul {
     justify-content: center;
     font-weight: lighter;
     font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 10px;
     overflow: hidden;
@@ -13,20 +12,28 @@ ul {
 
 .nav {
     padding: 5px;
-    color: darkgreen;
 }
 
+.nav-link:active {
+    color: black;
+}
+ 
 .nav:hover {
     font-size: 26px;
-    color: white;
-    background-color: rgb(138, 196, 183);
+    font-weight: 400;
+    font-size: larger;
+    background: white;
+    transition-property: inherit;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    border-radius: 30%;
 }
 
 .hide {
     display: none;
 }
 
-@media screen and (min-width:425px) {
+@media screen and (min-width:550px) {
 
     ul {
         float: right;
@@ -35,8 +42,6 @@ ul {
 
     .nav:hover {
         font-size: 29px;
-        color: white;
-        background-color: rgb(138, 196, 183);
     }
 
 }

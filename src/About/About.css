@@ -1,11 +1,24 @@
 .about {
     padding: 15px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.link:hover {
+    font-size: 19px;
+    font-weight: bold;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 
 @media screen and (min-width: 650px) {
     .about {
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left: 75px;
+        padding-right: 75px;
+        font-size: 20px;
+    }
+    .link:hover {
+        font-size: 25px;
     }
 }
 

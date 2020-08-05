@@ -48,7 +48,7 @@ class Add extends Component {
             <ErrorBoundary>
                 <section className="add-page">
                     <h1 className="add-hdr">Add a Review</h1>
-                    <h2>You are entering a spoiler free zone</h2>
+                    <h2 className="spoiler">You are entering a spoiler free zone</h2>
                     <section className="guide-section">
                         <h4 className="question">Would you recommend this book to others?</h4>
                         <h4 className="question">Did it live up to your expectations?</h4>
@@ -80,15 +80,15 @@ class Add extends Component {
                             <h3 className="qualities">Qualities of a...</h3>
                             <section className="rating-guide">
                                 <h4 className="five-star">5 star rating</h4>
-                                    <h5>An absolute masterpiece, impactful, a must read</h5>
+                                    <h5 className="desc">An absolute masterpiece, impactful, a must read</h5>
                                 <h4 className="four-star">4 star rating</h4>
-                                    <h5>A quality work, highly recommend</h5>
+                                    <h5 className="desc">A quality work, highly recommend</h5>
                                 <h4 className="three-star">3 star rating</h4>
-                                    <h5>Worth a read, would recommend</h5>
+                                    <h5 className="desc">Worth a read, would recommend</h5>
                                 <h4 className="two-star">2 star rating</h4>
-                                    <h5>Did not meet my expectations, would not reccomend</h5>
+                                    <h5 className="desc">Did not meet my expectations, would not reccomend</h5>
                                 <h4 className="one-star">1 star rating</h4>
-                                    <h5>Read at your own risk</h5>
+                                    <h5 className="desc">Read at your own risk</h5>
                             </section>
                             <label className="rating-input" htmlFor="rating-input" aria-required="true">Given thought to the rating parameters above, what rating would you give to this piece?</label>
                             <select id="rating-input" name="rating-input">
