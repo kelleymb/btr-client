@@ -17,7 +17,7 @@ Demo Password: Lorem21
 
 ### Application Demo
 
-https://giphy.com/embed/eIaivIc4kQJwp5bu20
+![](https://giphy.com/embed/eIaivIc4kQJwp5bu20)
 
 ### Technology
 
