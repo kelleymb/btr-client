@@ -17,7 +17,12 @@ Demo Password: Lorem21
 
 ### Application Demo
 
-![](/btr.gif)
+![](/images/BTR-Home.png)
+![](/images/BTR-SignIn.png)
+![](/images/BTR-SignUp.png)
+![](/images/BTR-Reviews.png)
+![](/images/BTR-AddReview.png)
+![](/images/BTR-AddReviewQualities.png)
 
 ### Technology
 
