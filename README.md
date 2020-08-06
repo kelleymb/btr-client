@@ -17,7 +17,7 @@ Demo Password: Lorem21
 
 ### Application Demo
 
-![](Animated GIF-source.gif)
+![](btr.gif)
 
 ### Technology
 
