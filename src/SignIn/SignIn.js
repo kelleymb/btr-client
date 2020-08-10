@@ -68,6 +68,13 @@ class SignIn extends Component {
         <ErrorBoundary>
           <section className="signin">
             <h1>Sign In</h1>
+            <section className="demo-info">
+              <p>
+                Demo Login Credentials
+                <p>Lorem21@gmail.com</p>
+                <p>Lorem21</p>
+              </p>
+            </section>
             <form className="signin-form" onSubmit={this.handleSignIn}>
               <label>Email Address</label>
               <input

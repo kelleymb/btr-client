@@ -111,26 +111,26 @@ class Reviews extends Component {
                 <div className="review-result">
                   <div className="user_name">
                     <h4 className="user_heading">Username:</h4>
-                    <p>{review.user_name}</p>
+                    <p className="result-field">{review.user_name}</p>
                   </div>
                   <div className="title">
                     <h4 className="title_heading">Book Title:</h4>
-                    <p>{review.title}</p>
+                    <p className="result-field">{review.title}</p>
                   </div>
                   <div className="author">
                     <h4 className="author_heading">Author:</h4>
-                    <p>{review.author}</p>
+                    <p className="result-field">{review.author}</p>
                   </div>
                   <div className="rating">
                     <h4 className="rating_heading">Rating:</h4>
-                    <p>
+                    <p className="result-field">
                       {review.rating}
                       /5
                     </p>
                   </div>
                   <div className="content">
                     <h4 className="content_heading">Content:</h4>
-                    <p>{review.content}</p>
+                    <p className="result-field">{review.content}</p>
                   </div>
                 </div>
               ))}

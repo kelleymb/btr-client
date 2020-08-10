@@ -24,12 +24,12 @@ class About extends Component {
           <ol>
             <li>
               Create an account with us!
-              <Link className="link" to="/signup">Sign Up Here</Link>
+              <Link className="link" to="/signup"> Sign Up Here</Link>
             </li>
             <li>Sign in with your credentials.</li>
             <li>
               Browse through the
-              <Link className="link" to="/dashboard">Dashboard</Link>
+              <Link className="link" to="/dashboard"> Dashboard</Link>
               {' '}
               and utilize user services such as posting a book review or browsing through reviews by both rating and username.
             </li>

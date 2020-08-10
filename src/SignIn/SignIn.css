@@ -2,6 +2,15 @@ h1 {
     text-align: center;
 }
 
+.demo-info {
+    text-align: center;
+    font-size: 18px;
+}
+
+.demo-info:hover {
+    font-size: 22px;
+}
+
 .signin-form {
     display: flex;
     flex-direction: column;
@@ -50,3 +59,9 @@ label {
     font-size: 28px;
     color: white;
 }
+
+/* @media screen and (min-width: 500px) {
+    .demo-info {
+        display: flex;
+    }
+} */

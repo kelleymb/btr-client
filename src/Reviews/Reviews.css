@@ -37,12 +37,16 @@ input {
 }
 
 .review-result {
+    display: block;
+    width: 75%;
     padding: 3px;
     border: 2px solid;
     height: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-    background: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    background: cornsilk;
     font-size: 18px;
 }
 
@@ -64,6 +68,13 @@ button:hover {
     border-radius: 30%;
 }
 
+@media screen and (min-width: 500px) {
+    .results {
+        width: auto;
+        margin-top: 45px;
+    }
+}
+
 @media screen and (min-width: 650px) {
 
     .search-by-rating, .search-by-user {
@@ -81,6 +92,7 @@ button:hover {
 
     .user-search-button, .rating-button {
         padding: 10px;
+        margin: 5px;
     }
 
     button {
@@ -94,6 +106,8 @@ button:hover {
         align-items: center;
         flex-direction: row;
         width: auto;
+        margin: 30px;
+        padding: 15px;
     } 
 
     .review-result {
@@ -102,9 +116,10 @@ button:hover {
         margin-bottom: 35px;
     }
 
-    .results {
+    /* .results {
         width: auto;
-    }
+        margin-top: 15px;
+    } */
 
     .user_heading, .title_heading, .author_heading, .rating_heading, .content_heading {
         display: flex;
@@ -112,7 +127,7 @@ button:hover {
         padding: 10px;
     }
 
-    p {
+    .result-field {
         display: flex;
         align-items: flex-end;
         text-align: left;

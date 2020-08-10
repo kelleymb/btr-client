@@ -1,7 +1,8 @@
 .App-header {
-    margin: 0;
+    margin: 5px;
     padding: 15px;
     font-size: 35px;
+    text-align: center;
 }
 
 .App {
@@ -20,3 +21,4 @@
     opacity: 0.6;
     z-index: -1;
 }
+
