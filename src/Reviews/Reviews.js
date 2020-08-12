@@ -29,11 +29,20 @@ class Reviews extends Component {
           return res.json();
         })
         .then((data) => {
-          this.setState({
-            reviews: [
-              ...data,
-            ],
-          });
+          if (data.length < 1) {
+            this.setState({
+              reviews: [
+                {user_name: '', title: "No Results", author: '', content: ''},
+              ],
+            });
+          }
+          else {
+            this.setState({
+              reviews: [
+                ...data,
+              ],
+            });
+            }
         })
         .catch((error) => {
           console.error({ error });
@@ -50,11 +59,20 @@ class Reviews extends Component {
           return res.json();
         })
         .then((data) => {
-          this.setState({
-            reviews: [
-              ...data,
-            ],
-          });
+          if (data.length < 1) {
+            this.setState({
+              reviews: [
+                {user_name: '', title: "No Results", author: '', content: ''},
+              ],
+            });
+          }
+          else {
+            this.setState({
+              reviews: [
+                ...data,
+              ],
+            });
+            }
         })
         .catch((error) => {
           console.error({ error });
